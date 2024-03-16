@@ -1,0 +1,17 @@
+:root {
+    --100-119-gradient: linear-gradient(to right, #9C3B45, #FE6170);
+
+    --120-199-gradient: linear-gradient(to right, #2957A1, #3D76D0);
+
+    --200-499-gradient: linear-gradient(to right, #893D88, #D660E1);
+
+    --500-999-gradient: linear-gradient(to right, #176D7E, #31ACB8);
+
+    --1000-gradient: linear-gradient(to right, #DBA28B, #FFD4C2);
+
+    --reg-gradient: linear-gradient(to right, #A1FFF6, #73FFF3);
+
+    --bid-gradient: linear-gradient(to right, #89F7FE, #66A6FF);
+
+    --balance-gradient: linear-gradient(to right, #489064, #87CA69);
+}
