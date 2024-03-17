@@ -1,5 +1,6 @@
 import './Header.css';
 import React, { useState, useEffect } from 'react';
+import Button_header from '../Buttons/Button_header.jsx'
 
 import Logo from '../../img/logo.png';
 import Volume_on from '../../img/volume/volume_on.png';
@@ -46,10 +47,7 @@ function Header() {
                      alt={isVolumeOn ? 'volume on' : 'volume off'}
                      onClick={toggleVolume}
                 />
-                <div className={'button_reg'}>
-                    <a>АВТОРИЗАЦИЯ</a>
-                    <img src={Lock} alt={'lock'} className={'header__lock'} />
-                </div>
+                <Button_header/>
             </div>
         </div>
     );
