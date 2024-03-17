@@ -1,0 +1,19 @@
+.button_reg {
+    background-image: var(--reg-gradient);
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 6px 9px 9px;
+    border-radius: 10px;
+}
+
+.header__lock {
+    width: 27px;
+    height: 27px;
+}
+
+.text {
+    color: black;
+}
