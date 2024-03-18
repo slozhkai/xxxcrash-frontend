@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Modal from '../Modal/Modal.jsx'; // Импорт компонента Modal
+import AuthModal from '../Modal/AuthModal/AuthModal.jsx'; // Импорт компонента AuthModal
 
 import Logo from '../../img/logo.png';
 import Volume_on from '../../img/volume/volume_on.png';
@@ -31,7 +31,7 @@ function Header() {
                     alt={isVolumeOn ? 'volume on' : 'volume off'}
                     onClick={toggleVolume}
                 />
-                <Modal /> {/* Рендер модального окна */}
+                <AuthModal />
             </div>
         </div>
     );

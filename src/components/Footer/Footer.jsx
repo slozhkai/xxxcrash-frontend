@@ -8,8 +8,12 @@ function Footer() {
         <div className={'footer'}>
             <a>© XXXCrush 2024</a>
             <div className={'links'}>
-                <img src={Telegramm}/>
-                <img src={GitHub}/>
+                <a href={'https://t.me/wtf2004android'}>
+                    <img src={Telegramm}/>
+                </a>
+                <a href={'https://github.com/slozhkai'}>
+                    <img src={GitHub}/>
+                </a>
             </div>
         </div>
     )

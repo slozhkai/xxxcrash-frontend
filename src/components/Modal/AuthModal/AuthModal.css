@@ -1,0 +1,81 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1C263E;
+    border-radius: 20px;
+    padding: 40px 76px;
+}
+
+.modal p {
+    color: #FFFFFF;
+    font-family: Rubik;
+    font-size: 24px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .input__text {
+    font-size: 20px;
+    font-family: Rubik;
+}
+
+.modal a {
+    font-family: Rubik;
+    font-size: 14px;
+}
+
+input {
+    background-color: transparent;
+    width: 443px;
+    border: none;
+    border-radius: 20px;
+    border: 1px solid white;
+    font-family: Rubik;
+    padding: 13px;
+    font-weight: 300;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+::placeholder {
+    color: #6AAFFF;
+    font-family: Rubik;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.idk {
+    font-family: Rubik;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 10px;
+    text-align: left;/* Устанавливаем отступ сверху */
+}
+
+.email,
+.password {
+    margin-bottom: 10px; /* Добавляем отступ снизу между input и следующим элементом */
+}
+
+
+
