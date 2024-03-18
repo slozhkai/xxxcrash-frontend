@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import './AuthModal.css'; // Импортируем CSS стили
 import Button_header from '../../Buttons/Button_header.jsx';
-import AuthButton from "../../Buttons/AuthButton/AuthButton.jsx";
-import RegModal from '../RegModal/RegModal.jsx'; // Импортируем компонент RegModal
+import AuthButton from "../../Buttons/AuthButton/AuthButton.jsx";// Импортируем компонент RegModal
 
 class AuthModal extends Component {
     state = {
-        modalOpen: false,
-        regModalOpen: false // Добавляем состояние для модального окна регистрации
+        modalOpen: false // Добавляем состояние для модального окна регистрации
     }
 
     handleOpen = () => {
@@ -20,40 +18,35 @@ class AuthModal extends Component {
         document.body.classList.remove('modal-open'); // Удаляем класс для разрешения прокрутки страницы
     }
 
-    handleRegModalOpen = () => {
-        this.setState({ regModalOpen: true }); // Открываем модальное окно регистрации
-    }
-
     handleModalClick = (e) => {
         e.stopPropagation();
     }
 
     render() {
         return (
-            <div>
-                {this.state.modalOpen && <div className="modal-overlay" onClick={this.handleClose}></div>} {/* Затемнение всего экрана */}
-                <Button_header onClick={this.handleOpen} /> {/* Кнопка открывает модальное окно */}
+            <>
+                {this.state.modalOpen && <div className="modal-overlay" onClick={this.handleClose}></div>}
+                <Button_header onClick={this.handleOpen} />
                 {this.state.modalOpen && (
                     <div className="modal" onClick={this.handleModalClick}>
                         <div className={'content'}>
                             <p>Вход</p>
-                            <div input__content>
-                                <div className={'email'}>
-                                    <p className={'input__text'}>Email</p>
-                                    <input type={"email"} placeholder='Введите ваш Email...' />
+                            <div className="input__content">
+                                <div className="email">
+                                    <p className="input__text">Email</p>
+                                    <input type="email" placeholder='Введите ваш Email...' />
                                 </div>
-                                <div className={'password'}>
-                                    <p className={'input__text'}>Пароль</p>
-                                    <input type={"password"} placeholder='Введите ваш Пароль...' />
+                                <div className="password">
+                                    <p className="input__text">Пароль</p>
+                                    <input type="password" placeholder='Введите ваш Пароль...' className={'input'}/>
                                 </div>
-                                <a className={'idk'} onClick={this.handleRegModalOpen}>У меня нет аккаунта</a> {/* Добавляем обработчик для открытия модального окна регистрации */}
+                                <a className="idk">У меня нет аккаунта</a>
                             </div>
-                            <AuthButton/>
+                            <AuthButton />
                         </div>
                     </div>
                 )}
-                {this.state.regModalOpen && <RegModal onClose={() => this.setState({ regModalOpen: false })} />} {/* Отображаем модальное окно регистрации */}
-            </div>
+            </>
         );
     }
 }

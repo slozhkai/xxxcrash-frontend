@@ -8,7 +8,7 @@
     padding: 40px 76px;
 }
 
-.modal p {
+.modal a, p {
     color: #FFFFFF;
     font-family: Rubik;
     font-size: 24px;
