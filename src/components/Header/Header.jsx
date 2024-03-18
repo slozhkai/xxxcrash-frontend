@@ -1,40 +1,23 @@
-import './Header.css';
 import React, { useState, useEffect } from 'react';
-import Button_header from '../Buttons/Button_header.jsx'
+import Modal from '../Modal/Modal.jsx'; // Импорт компонента Modal
 
 import Logo from '../../img/logo.png';
 import Volume_on from '../../img/volume/volume_on.png';
 import Volume_off from '../../img/volume/volume_off.png';
-import Lock from '../../img/lock.png';
+import soundFile from '../../audio/sound.mp3';
+import '../Header/Header.css'
 
 function Header() {
+
     const [isVolumeOn, setIsVolumeOn] = useState(true);
-    // const [audio] = useState(new Audio('../audio/sound.mp3'));
-    //
-    // useEffect(() => {
-    //     const loadedDataHandler = () => {
-    //         console.log('Аудио загружено');
-    //     };
-    //
-    //     const errorHandler = () => {
-    //         console.error('Ошибка загрузки аудио');
-    //     };
-    //
-    //     audio.addEventListener('loadeddata', loadedDataHandler);
-    //     audio.addEventListener('error', errorHandler);
-    //
-    //     return () => {
-    //         audio.removeEventListener('loadeddata', loadedDataHandler);
-    //         audio.removeEventListener('error', errorHandler);
-    //     };
-    // }, [audio]);
+    const [audio] = useState(new Audio(soundFile));
 
     const toggleVolume = () => {
-        // if (isVolumeOn) {
-        //     audio.pause();
-        // } else {
-        //     audio.play();
-        // }
+        if (isVolumeOn) {
+            audio.pause();
+        } else {
+            audio.play();
+        }
         setIsVolumeOn(!isVolumeOn);
     };
 
@@ -42,12 +25,13 @@ function Header() {
         <div className={'header'}>
             <img src={Logo} alt={'logo'} className={'logo'} />
             <div className={'header__buttons'}>
-                <img className={'volume'}
-                     src={isVolumeOn ? Volume_on : Volume_off}
-                     alt={isVolumeOn ? 'volume on' : 'volume off'}
-                     onClick={toggleVolume}
+                <img
+                    className={'volume'}
+                    src={isVolumeOn ? Volume_on : Volume_off}
+                    alt={isVolumeOn ? 'volume on' : 'volume off'}
+                    onClick={toggleVolume}
                 />
-                <Button_header/>
+                <Modal /> {/* Рендер модального окна */}
             </div>
         </div>
     );

@@ -1,53 +1,21 @@
-/*@font-face {*/
-/*    font-family: 'Rubik';*/
-/*    font-style: normal;*/
-/*    font-weight: 300;*/
-/*    src: local('Rubik'), local('Rubik-Light'),*/
-/*    url("./font/Rubik/eot/Rubik-Light.eot") format('eot'),*/
-/*    url("./font/Rubik/ttf/Rubik-Light.ttf") format('ttf'),*/
-/*    url("./font/Rubik/woff2/Rubik-Light.woff2") format('woff2');*/
-/*}*/
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Rubik'), local('Rubik-Regular'),
+    url("./font/Rubik/eot/Rubik-Regular.eot") format('eot'),
+    url("./font/Rubik/ttf/Rubik-Regular.ttf") format('ttf'),
+    url("./font/Rubik/ttf/Rubik-Regular.ttf") format('woff'),
+    url("./font/Rubik/woff2/Rubik-Regular.woff2") format('woff2');
+}
 
-/*@font-face {*/
-/*    font-family: 'Rubik';*/
-/*    font-style: normal;*/
-/*    font-weight: 400;*/
-
-/*}*/
-
-/*@font-face {*/
-/*    font-family: 'Rubik';*/
-/*    font-style: normal;*/
-/*    font-weight: 500;*/
-/*    src: local('Rubik'), local('Rubik-Medium'),*/
-/*        url("./font/Rubik/woff/Rubik-Medium.woff") format('woff');*/
-
-/*}*/
-
-/*@font-face {*/
-/*    font-family: 'Rubik';*/
-/*    font-style: normal;*/
-/*    font-weight: 600;*/
-
-/*}*/
-
-/*@font-face {*/
-/*    font-family: 'Rubik';*/
-/*    font-style: normal;*/
-/*    font-weight: 700;*/
-
-/*}*/
-
-/*@font-face {*/
-/*    font-family: 'Rubik';*/
-/*    font-style: normal;*/
-/*    font-weight: 800;*/
-
-/*}*/
-
-/*@font-face {*/
-/*    font-family: 'Rubik';*/
-/*    font-style: normal;*/
-/*    font-weight: 900;*/
-
-/*}*/
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Rubik'), local('Rubik-Medium'),
+    url("./font/Rubik/eot/Rubik-Medium.eot") format('eot'),
+    url("./font/Rubik/ttf/Rubik-Medium.ttf") format('ttf'),
+    url("./font/Rubik/ttf/Rubik-Medium.woff") format('woff'),
+    url("./font/Rubik/woff2/Rubik-Medium.woff2") format('woff2');
+}
