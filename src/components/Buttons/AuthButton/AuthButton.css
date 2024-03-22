@@ -1,4 +1,4 @@
-button {
+.auth__btn {
     background-image: var(--reg-gradient);
     padding: 10px;
     font-family: Rubik;

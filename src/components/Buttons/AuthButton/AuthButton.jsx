@@ -2,7 +2,7 @@ import './AuthButton.css'
 
 function AuthButton() {
     return(
-        <button>Войти</button>
+        <button className={'auth__btn'}>Войти</button>
     )
 }
 

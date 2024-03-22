@@ -3,8 +3,15 @@ import C4 from '../../../img/bit/c4.png'
 import Balance from '../../../img/bit/wallet.png'
 import Gamepad from '../../../img/bit/gamepad.png'
 import Anonymus from '../../../img/bit/mask.png'
+import {useState} from "react";
+
 
 function Bit() {
+    const [buttonStyle, setButtonStyle] = useState('kf__button');
+
+    const changeByttonStyle = () => {
+        setButtonStyle(buttonStyle === 'kf__button' ? 'kf__button_another' : 'kf__button');
+    }
 
     return(
         <div className={'bit__content'}>
@@ -20,11 +27,11 @@ function Bit() {
                 <a>Автовывод</a>
                 <div className={'bit__kf'}>
                     <div>
-                        <button className={'kf__button'}>x1.1</button>
-                        <button className={'kf__button'}>x1.2</button>
-                        <button className={'kf__button'}>x1.5</button>
-                        <button className={'kf__button'}>x2.0</button>
-                        <button className={'kf__button'}>x5.0</button>
+                        <button className={buttonStyle} onClick={changeByttonStyle}>x1.1</button>
+                        <button className={buttonStyle} onClick={changeByttonStyle}>x1.2</button>
+                        <button className={buttonStyle} onClick={changeByttonStyle}>x1.5</button>
+                        <button className={buttonStyle} onClick={changeByttonStyle}>x2.0</button>
+                        <button className={buttonStyle} onClick={changeByttonStyle}>x5.0</button>
                     </div>
                 </div>
             </div>

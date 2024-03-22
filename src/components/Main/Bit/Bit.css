@@ -17,6 +17,7 @@
     color: #FFFFFF;
     font-size: 36px;
     font-family: Rubik;
+    font-weight: bolder;
 }
 
 .bit__image {
@@ -34,6 +35,7 @@
     flex-direction: row;
     font-family: Rubik;
     align-items: center;
+
 }
 
 .bit__auto {
@@ -59,6 +61,27 @@
     border-radius: 5px;
     width: fit-content;
     height: fit-content;
+    padding: 7px 12px;
+}
+
+.kf__button:not(:first-child) {
+    margin-left: 20px;
+}
+
+.kf__button_another {
+    background: #3B477A;
+    color: white;
+    font-weight: 300;
+    border-radius: 5px;
+    padding: 7px 12px;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    border: none;
+}
+
+.kf__button_another:not(:first-child) {
+    margin-left: 20px;
 }
 
 .bit__input_real {
@@ -70,11 +93,6 @@
 ::placeholder {
     color: #FFFFFF;
     font-family: Rubik;
-}
-
-
-.kf__button:not(:first-child) {
-    margin-left: 20px;
 }
 
 .kaka {
@@ -103,7 +121,7 @@
     gap: 32px;
     cursor: pointer;
 
-    & a{
+    & a {
         color: #1C263E;
         font-family: Rubik;
         font-weight: 500;
