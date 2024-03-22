@@ -84,10 +84,21 @@
     margin-left: 20px;
 }
 
+.bit__input {
+    position: relative;
+}
+
+.bit__dollar-sign {
+    position: absolute;
+    left: 10px; /* Подстройте это значение по вашему усмотрению */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Чтобы символ "$" не мешал вводу текста */
+    color: #FFFFFF; /* Цвет символа "$" */
+}
+
 .bit__input_real {
-    border: none;
-    padding: 9px;
-    box-shadow: 0 0 0 0.5px #3B477A;
+    padding-left: 20px; /* Учитывайте ширину символа "$" */
 }
 
 ::placeholder {
