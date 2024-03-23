@@ -1,0 +1,51 @@
+.deposit__content {
+    background-color: #1C263E;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 20px;
+    padding: 25px 46px;
+}
+
+.deposit__title {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.deposit__img {
+    width: 50px;
+    height: 50px;
+}
+
+.deposit__title {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+.deposit__button {
+    background-image: var(--bid-gradient);
+    border-radius: 20px;
+    padding: 16px 18px;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    color: #1C263E;
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.deposit__place {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}

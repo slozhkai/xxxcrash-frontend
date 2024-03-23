@@ -1,5 +1,62 @@
-.content {
-    width: 800px;
-    height: 423px;
+.kf__content {
+    width: 893px;
+    height: 393px;
     background-color: #1C263E;
+    position: relative;
+    background-image: url('../../../img/town.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    border-radius: 20px;
+}
+
+.kf__content::after {
+    content: '';
+    position: absolute;
+    bottom: 72px;
+    left: 50%;
+    transform: translateX(-50%); /* Смещаем линию влево на половину её ширины */
+    width: 860px;
+    height: 1px;
+    background-color: #ffffff;
+}
+
+.kf__count {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120%); /* Смещаем на половину ширины и высоты элемента */
+    font-family: Rubik;
+    font-size: 64px;
+    color: white;
+    font-weight: 500;
+}
+
+.kf__about {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-family: Rubik;
+    font-weight: 500;
+}
+
+.kf__about_block {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.kf__about__text {
+    color: #6AAFFF;
+}
+
+.kf__runner {
+    position: absolute;
+    bottom: 72px;
+    left: 5%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
 }

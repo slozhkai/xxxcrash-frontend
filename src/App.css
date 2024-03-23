@@ -3,11 +3,24 @@
     flex-direction: column;
     gap: 50px;
 }
-.main__top {
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.main__left {
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: center;
-    gap: 20px;
 }
+
+Footer {
+    margin-top: auto;
+}
+
+
 
 

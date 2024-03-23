@@ -13,5 +13,7 @@
 
     --bid-gradient: linear-gradient(to right, #89F7FE, #66A6FF);
 
+    --not-available-gradient: linear-gradient(to right, #DA1A1A, #440808);
+
     --balance-gradient: linear-gradient(to right, #489064, #87CA69);
 }
