@@ -11,6 +11,7 @@ import './App.css'
 function App() {
     const [balance, setBalance] = useState(500);
     const [betAmount, setBetAmount] = useState(0);
+    const [coefficient, setCoefficient] = useState(1); // Добавляем состояние для коэффициента
 
     const updateBalance = (amount) => {
         setBalance(prevBalance => prevBalance + amount);
@@ -21,11 +22,11 @@ function App() {
             <Header/>
             <main className={'main'}>
                 <div className={'main__left'}>
-                    <Bit balance={balance} setBetAmount={setBetAmount} />
+                    <Bit balance={balance} setBetAmount={setBetAmount} coefficient={coefficient} /> {/* Передаем коэффициент */}
                     <Deposit updateBalance={updateBalance}/>
                 </div>
                 <div className={'main__right'}>
-                    <Kf betAmount={betAmount} />
+                    <Kf betAmount={betAmount} setCoefficient={setCoefficient}/> {/* Передаем функцию установки коэффициента */}
                 </div>
             </main>
             <Footer/>

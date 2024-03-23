@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './Bit.css';
 import C4 from '../../../img/bit/c4.png';
 import Balance from '../../../img/bit/wallet.png';
 import Gamepad from '../../../img/bit/gamepad.png';
 import Anonymus from '../../../img/bit/mask.png';
+import Runner from '../../../img/gif/begun.gif';
 
 function Bit({ balance, setBetAmount }) {
     const [activeButton, setActiveButton] = useState(null);
     const [inputValue, setInputValue] = useState('');
+    const [runnerVisible, setRunnerVisible] = useState(false);
+    const [count, setCount] = useState(0);
+    const [runnerPosition, setRunnerPosition] = useState(0);
 
     const changeButtonStyle = (index) => {
         setActiveButton(index === activeButton ? null : index);
@@ -23,11 +27,21 @@ function Bit({ balance, setBetAmount }) {
     const handleBet = () => {
         if (!isNaN(inputValue)) {
             setBetAmount(parseFloat(inputValue));
-            // Другие действия, если нужно
+            setRunnerVisible(true);
         }
     }
 
-    // Определяем класс для кнопки bit__gamepad
+
+    useEffect(() => {
+        if (runnerVisible) {
+            const timer = setInterval(() => {
+                setCount(prevCount => prevCount + 0.15); // Увеличиваем число на 0.15 каждую секунду
+                setRunnerPosition(prevPosition => prevPosition + 1);
+            }, 1000);
+            return () => clearInterval(timer);
+        }
+    }, [runnerVisible]);
+
     const gamepadClassName = inputValue > balance ? 'bit__gamepad_another' : 'bit__gamepad';
 
     return (
@@ -65,11 +79,11 @@ function Bit({ balance, setBetAmount }) {
                     onChange={handleInputChange}
                 />
             </div>
-            <div className={'bit_buttons'}  onClick={handleBet}>
+            <div className={'bit_buttons'} onClick={handleBet}>
                 <div className={gamepadClassName}>
                     <div className={'kaka'}>
                         <img src={Gamepad} alt={'Gamepad'} />
-                        <a className={'bit__button_text'}>СДЕЛАТЬ СТАВКУ</a>
+                        <a className={'bit__button_text'}>{runnerVisible ? "ЗАБРАТЬ СТАВКУ" : "СДЕЛАТЬ СТАВКУ"}</a>
                     </div>
                     <a className={'bit__button_text'}>{inputValue ? inputValue + '$' : '0.00$'}</a>
                 </div>
