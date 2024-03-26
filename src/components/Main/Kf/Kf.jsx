@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Kf.css';
+import CoafisientList from "../../CoafisientList/CoafisientList.jsx";
 import begun from '../../../img/gif/begun.gif';
 import perdun from '../../../img/gif/perdun.gif';
 
@@ -69,6 +70,7 @@ function Kf({ betAmount }) {
 
             <div className={'kf__count'} style={{ color: crashed ? 'red' : 'white' }}>{formatNumber()}</div>
 
+            <CoafisientList/>
             {/* Runner */}
             {betAmount > 0 && !crashed && (
                 <img src={begun} alt={'Runner'} className={'kf__runner'} style={{ left: `${runnerPosition}px` }} />

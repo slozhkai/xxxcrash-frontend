@@ -1,0 +1,9 @@
+.coalist__container {
+    display: flex;
+    flex-direction: row;
+    max-width: 838px;
+    max-height: 36px;
+    align-items: center;
+    gap: 16px;
+    justify-content: left;
+}

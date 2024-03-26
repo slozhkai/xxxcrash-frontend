@@ -1,0 +1,17 @@
+.coa__container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    padding: 6px 18px;
+    border-radius: 15px;
+}
+
+.coa__text {
+    font-family: Rubik, serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;;
+}
