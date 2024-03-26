@@ -7,12 +7,13 @@ export default function CoafisientList() {
     {id: 1, kf: 2.01},
     {id: 2, kf: 9.02},
     {id: 3, kf: 1.03},
-    {id: 4, kf: 0.04},
+    {id: 4, kf: 10.04},
     {id: 5, kf: 5.05},
     {id: 6, kf: 1.06},
     {id: 7, kf: 10.07},
-    {id: 8, kf: 1.08},
-    {id: 9, kf: 100.09},
+    {id: 8, kf: 6.08},
+    {id: 9, kf: 1.09},
+    {id: 10, kf: 1.10},
     {id: 10, kf: 1.10},
   ])
 

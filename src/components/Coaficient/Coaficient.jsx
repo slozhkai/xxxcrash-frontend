@@ -15,7 +15,7 @@ function Coafiscient(props) {
       return 'var(--1000-gradient)';
     } else {
       console.log(coaf);
-      return 'var(--not-available-gradient)';
+      return 'var(--100-119-gradient)';
     }
   };
   return (
@@ -26,3 +26,4 @@ function Coafiscient(props) {
 }
 
 export default Coafiscient;
+
