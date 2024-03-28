@@ -5,13 +5,15 @@ import Bit from "./components/Main/Bit/Bit.jsx";
 import './font.css'
 import Deposit from "./components/Main/Deposit/Deposit.jsx";
 import Kf from "./components/Main/Kf/Kf.jsx";
+import GameHistory from "./components/Main/GameHistory/GameHistory.jsx";
+import {TrueAuthModal} from "./components/TrueModal/TrueAuthModal/TrueAuthModal.jsx";
 
 import './App.css'
 
 function App() {
     const [balance, setBalance] = useState(500);
     const [betAmount, setBetAmount] = useState(0);
-    const [coefficient, setCoefficient] = useState(1); // Добавляем состояние для коэффициента
+    const [coefficient, setCoefficient] = useState(1);
 
     const updateBalance = (amount) => {
         setBalance(prevBalance => prevBalance + amount);
@@ -22,12 +24,15 @@ function App() {
             <Header/>
             <main className={'main'}>
                 <div className={'main__left'}>
-                    <Bit balance={balance} setBetAmount={setBetAmount} coefficient={coefficient} /> {/* Передаем коэффициент */}
+                    <Bit balance={balance} setBetAmount={setBetAmount} coefficient={coefficient} />
                     <Deposit updateBalance={updateBalance}/>
                 </div>
                 <div className={'main__right'}>
-                    <Kf betAmount={betAmount} setCoefficient={setCoefficient}/> {/* Передаем функцию установки коэффициента */}
+                    <Kf betAmount={betAmount} setCoefficient={setCoefficient}/>
+                    <GameHistory/>
                 </div>
+
+                <TrueAuthModal/>
             </main>
             <Footer/>
         </div>

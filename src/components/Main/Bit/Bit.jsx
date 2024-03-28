@@ -35,7 +35,7 @@ function Bit({ balance, setBetAmount }) {
     useEffect(() => {
         if (runnerVisible) {
             const timer = setInterval(() => {
-                setCount(prevCount => prevCount + 0.15); // Увеличиваем число на 0.15 каждую секунду
+                setCount(prevCount => prevCount + 0.15);
                 setRunnerPosition(prevPosition => prevPosition + 1);
             }, 1000);
             return () => clearInterval(timer);

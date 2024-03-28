@@ -10,19 +10,20 @@ function Kf({ betAmount }) {
     const [coefficient, setCoefficient] = useState(1);
     const [crashed, setCrashed] = useState(false);
     const [lastCrashCoefficient, setLastCrashCoefficient] = useState(0);
-    const [failureChance, setFailureChance] = useState(0.15);
-    const [lastRunnerPosition, setLastRunnerPosition] = useState(0);
+    const [failureChance, setFailureChance] = useState(0.1); // Начальный шанс на провал
+    const [lastRunnerPosition, setLastRunnerPosition] = useState(0); // Позиция бегуна в момент краша
 
+    // Старт анимации при изменении ставки
     useEffect(() => {
         if (betAmount > 0) {
             const interval = setInterval(() => {
                 setRunnerPosition(prevPosition => {
-                    setLastRunnerPosition(prevPosition);
+                    setLastRunnerPosition(prevPosition); // Сохраняем позицию бегуна
                     return prevPosition + 1;
                 });
-                setCoefficient(prevCoefficient => prevCoefficient + 0.01);
+                setCoefficient(prevCoefficient => prevCoefficient + 0.01); // Увеличиваем коэффициент на 0.01 каждые 100 мсек
                 if (failureChance < 100) {
-                    setFailureChance(prevChance => prevChance + 0.025);
+                    setFailureChance(prevChance => prevChance + 0.025); // Увеличиваем шанс на провал на 0.05% каждую секунду, если он меньше 100
                 }
             }, 100);
             setTimer(interval);
@@ -39,18 +40,18 @@ function Kf({ betAmount }) {
 
     // Обработка краша
     useEffect(() => {
-        if (Math.random() * 100 < failureChance) {
-            clearInterval(timer);
-            setLastCrashCoefficient(coefficient);
-            setRunnerPosition(0);
-            setCrashed(true);
+        if (Math.random() * 100 < failureChance) { // Проверка на краш с учетом шанса провала
+            clearInterval(timer); // Остановка анимации бегуна
+            setLastCrashCoefficient(coefficient); // Сохранение коэффициента на момент краша
+            setRunnerPosition(0); // Возвращение бегуна на стартовую позицию
+            setCrashed(true); // Устанавливаем флаг краша
         }
     }, [coefficient, failureChance, timer]);
 
     const restartBet = () => {
-        setCrashed(false);
-        setCoefficient(lastCrashCoefficient);
-        setFailureChance(0.15);
+        setCrashed(false); // Сброс флага краша
+        setCoefficient(lastCrashCoefficient); // Восстановление коэффициента на момент краша
+        setFailureChance(0.15); // Возвращение начального значения шанса на провал
     };
 
 
@@ -65,12 +66,11 @@ function Kf({ betAmount }) {
                     <a className={'kf__about__text'}>Раунд</a>
                     <a className={'round__count'}>1</a>
                 </div>
-
-              
             </div>
 
             <div className={'kf__count'} style={{ color: crashed ? 'red' : 'white' }}>{formatNumber()}</div>
 
+            <CoafisientList/>
             {/* Runner */}
             {betAmount > 0 && !crashed && (
                 <img src={begun} alt={'Runner'} className={'kf__runner'} style={{ left: `${runnerPosition}px` }} />
@@ -80,8 +80,6 @@ function Kf({ betAmount }) {
                     <img src={perdun} alt={'Perdun'} className={'kf__runner'} style={{ left: `${lastRunnerPosition}px` }} />
                 </>
             )}
-
-            <CoafisientList />
         </div>
     );
 }

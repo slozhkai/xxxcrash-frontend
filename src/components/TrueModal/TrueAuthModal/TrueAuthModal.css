@@ -1,0 +1,61 @@
+.auth__modal_wrapper {
+    background-color: #1C263E;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    transform: translateY(-50%);
+    transition: opacity .3s, transform .5s;
+}
+
+.auth__modal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 37px;
+    padding: 40px 76px 40px 76px;
+}
+
+.auth__input_block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth__modal_maintext {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.auth__input_modal_text {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.auth__modal__button {
+    background-image: var(--reg-gradient);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.auth__trans_reg {
+    font-weight: 300;
+    font-size: 14px;
+    color: #cdcdcd;
+}
+
+.auth__input_modal::placeholder {
+    font-weight: 300;
+    color: #6AAFFF;
+}
+
+.auth__input_modal:focus {
+    outline: none;
+    font-weight: 300;
+    color: #6AAFFF;
+}
+
+.auth__modal__button:focus {
+    outline: none;
+}

@@ -1,0 +1,10 @@
+.game__history__container {
+    width: 893px;
+    height: 274px;
+    background-color: #1C263E;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    border-radius: 20px;
+    margin-top: 30px;
+}

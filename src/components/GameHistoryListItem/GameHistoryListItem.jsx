@@ -11,16 +11,19 @@ function GameHistoryListItem(props){
         <div className='game__history__item__info__bet'>{props.game.bet}</div>
         <div className='game__history__item__info__result'>
           {!props.game.crash && (
-              
+
               <div className='game__history__item__info__win'>{props.game.ЗАНОС}</div>
           )}
           {props.game.crash && (
-              <>  
+              <>
                 <div className='game__history__item__info__lose'>CRASH</div>
                 <img src={'...'} alt='crash' className='game__history__item__info__crash-picture'/>
               </>
           )}
         </div>
     </div>
+    </div>
   )
 }
+
+export default GameHistoryListItem;

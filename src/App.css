@@ -7,7 +7,15 @@
 main {
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    /*gap: 80px;*/
+    justify-content: space-between;
+}
+
+.main__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .main__left {
