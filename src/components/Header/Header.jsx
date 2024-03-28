@@ -25,6 +25,7 @@ function Header() {
         setIsVolumeOn(!isVolumeOn);
     };
 
+
     return (
         <div className={'header'}>
             <img src={Logo} alt={'logo'} className={'logo'} />
