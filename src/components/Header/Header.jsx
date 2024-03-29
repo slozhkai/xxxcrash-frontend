@@ -31,7 +31,6 @@ function Header() {
                     alt={isVolumeOn ? 'volume on' : 'volume off'}
                     onClick={toggleVolume}
                 />
-                <AuthModal />
             </div>
         </div>
     );
