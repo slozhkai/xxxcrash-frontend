@@ -6,7 +6,6 @@ import './font.css'
 import Deposit from "./components/Main/Deposit/Deposit.jsx";
 import Kf from "./components/Main/Kf/Kf.jsx";
 import GameHistory from "./components/Main/GameHistory/GameHistory.jsx";
-import {TrueAuthModal} from "./components/TrueModal/TrueAuthModal/TrueAuthModal.jsx";
 
 import './App.css'
 
@@ -31,8 +30,6 @@ function App() {
                     <Kf betAmount={betAmount} setCoefficient={setCoefficient}/>
                     <GameHistory/>
                 </div>
-
-                <TrueAuthModal/>
             </main>
             <Footer/>
         </div>

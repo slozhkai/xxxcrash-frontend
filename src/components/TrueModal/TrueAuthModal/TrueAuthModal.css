@@ -1,3 +1,38 @@
+.auth__modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный цвет, чтобы затемнить фон */
+    display: flex;
+    z-index: 9999;
+    justify-content: center; /* Выравнивание по центру по горизонтали */
+    align-items: center; /* Выравнивание по центру по вертикали */
+}
+
+.auth__modal_content {
+    background-color: #1C263E;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 20px; /* Уменьшаем отступы вокруг контента */
+}
+
+.auth__modal_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth__modal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
 .auth__modal_wrapper {
     background-color: #1C263E;
     width: fit-content;
